@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_material/screens/welcome.dart';
 
+import 'constans/colors.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        primaryColor: MaterialColors.kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white
       ),
       home: WelcomeScreen(),
       debugShowCheckedModeBanner: false,
