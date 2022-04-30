@@ -19,14 +19,14 @@ class Background extends StatelessWidget{
           new Positioned(
             top: 0,
             left: 0,
-            child: Image.asset("assets/images/main_top.png",
+            child: Image.asset("assets/images/signup_top.png",
               width: size.width*0.3,
             ),
           ),
           new Positioned(
             bottom: 0,
-            right: 0,
-            child: new Image.asset("assets/images/login_bottom.png",
+            left: 0,
+            child: new Image.asset("assets/images/main_bottom.png",
               width: size.width*0.2,),
           ),
           child

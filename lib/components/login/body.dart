@@ -1,7 +1,13 @@
 
   import 'package:flutter/material.dart';
+import 'package:flutter_login_material/components/general/roundedButton.dart';
+import 'package:flutter_login_material/components/general/roundedInputField.dart';
+import 'package:flutter_login_material/components/general/roundedPasswordField.dart';
 import 'package:flutter_login_material/components/login/background.dart';
+import 'package:flutter_login_material/screens/signUpScreen.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../general/already_have_an_account_acheck.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -20,7 +26,30 @@ class Body extends StatelessWidget {
                 height: size.height * 0.45,
               ),
               SizedBox(height: size.height*0.03,),
-              
+              RoundedInputField(
+                hintText: "Your Email",
+                icon: Icons.person,
+                onChange: (value){},
+              ),
+              RoundedPasswordField(
+                onChange: (value){},
+              ),
+              RoundedButton(
+                text: "Login",
+                press: (){},
+              ),
+              AlreadyHaveAnAccountCheck(
+                login: true,
+                press: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context){
+                    return SignUpScreen();
+                  })
+                  );
+                },
+
+              )
+
             ],
           ),
         ),
